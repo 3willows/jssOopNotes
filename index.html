@@ -5,18 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewliort" content="width=device-width, initial-scale=1.0">
   <title>Javascript OOP</title>
+  <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
 
   <h1>Javascript OOP</h1>
-  <ul>
-    <li>Open Developer Tools => Console</li>
-    <li>Type a string followed by ".yell()" </li>
-    <li>Because of a custom definition, the string will be printed on the console in upper case</li>
-    <li>Example:">hello".yell() ↵ => HELLO</li>
-  </ul>
+  <ol>
+    <li>
+      In proto_underHood.js
+      <ul>
+        <li>Open Developer Tools => Console</li>
+        <li>Type a string followed by ".yell()" </li>
+        <li>Because of a custom definition, the string will be printed on the console in upper case</li>
+        <li>Example:">hello".yell() ↵ => HELLO</li>
+      </ul>
+    <li>
+      <span id="colorTitle"> In colorsTranslator </span>
+      <ul>
+        <form action="">
+          <li> r <input type="range" name="r" min="0" max="255" value="170"></li>
+          <li> g <input type="range" name="g" min="0" max="255" value="50"></li>
+          <li> b <input type="range" name="b" min="0" max="255" value="75"></li>
+          <li>RGB value<input type="text" id="rgbValues" placeholder="move the dials!"></li>
+          <li>HEX value<input type="text" id="hexValues" placeholder="move the dials!">
+          </li>
+        </form>
+      </ul>
+
+    </li>
+    </li>
+
+  </ol>
+
   <script src="protoUnderHood.js"></script>
+  <script src="colorsTranslator.js"></script>
 </body>
 
 </html>
