@@ -1,10 +1,12 @@
-#colorTitle{
-  color: rgb(170, 50,75);
+#colorTitle {
+  color: rgb(170, 50, 75);
 }
 
 ol ul {
-  margin-bottom: 20px; /* Adjust the value to increase or decrease space */
+  margin-bottom: 20px;
+  /* Adjust the value to increase or decrease space */
 }
+
 /* 
 ul {
   padding: 0;
