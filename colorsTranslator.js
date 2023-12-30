@@ -1,5 +1,3 @@
-// This is the "factory" pattern (???)
-
 const hex = (r, g, b) =>
   `#` + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
 
@@ -8,6 +6,7 @@ const rgb = (r, g, b) => {
 }
 
 // console.log(hex(0, 51, 255))
+// This is the "factory" pattern (???)
 
 function makeColor (r, g, b) {
   const color = {}
@@ -24,6 +23,31 @@ function makeColor (r, g, b) {
     `#` + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
   return color
 }
+
+// the problem is that fucntions are unnecessarily copied
+
+function Color (r, g, b) {
+  this.r = r
+  this.g = g
+  this.b = b
+}
+
+Color.prototype.rgb = function () {
+  const { r, g, b } = this
+  return `rgb(${r},${g},${b})`
+}
+
+Color.prototype.hex = function () {
+  const { r, g, b } = this
+  return `#` + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+}
+
+Color.prototype.rgba = function (a = 1.0) {
+  const { r, g, b } = this
+  return `rgba(${r},${g},${b},${a})`
+}
+
+// If you don't use a new prorperty, this will point towards the whole Window.
 
 const firstColor = new makeColor(0, 51, 255)
 
@@ -42,7 +66,8 @@ form.addEventListener('change', function (e) {
   console.log(`Red: ${r}, Green: ${g}, Blue: ${b}`)
   colorTitle.style.color = `rgb(${r}, ${g}, ${b})`
 
-  const colorObject = makeColor(r, g, b)
+  // const colorObject = makeColor(r, g, b)
+  const colorObject = new Color(r, g, b)
 
   const rgbValues = document.querySelector('#rgbValues')
   const hexValues = document.querySelector('#hexValues')
@@ -51,3 +76,5 @@ form.addEventListener('change', function (e) {
 
   hexValues.value = colorObject.hex()
 })
+
+const color1 = new Color(98, 164, 75)
