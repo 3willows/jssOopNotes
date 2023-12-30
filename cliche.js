@@ -9,6 +9,11 @@ class Pet {
 }
 
 class Cat extends Pet{
+  constructor(name,age, Livesleft = 9){
+    super(name, age)
+    // must use that otherwise get an error message!
+    this.Livesleft = Livesleft 
+  }
   meow() {
     return (`${this.name} says MEOOOOW!`)
   }
