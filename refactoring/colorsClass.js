@@ -54,7 +54,7 @@ class example {
 // const c1 = new example(222, 2, 22)
 
 class classyColor {
-  constructor (r, g, b, name) {
+  constructor (r, g, b, name = "unnamed color") {
     this.r = r
     this.g = g
     this.b = b
@@ -71,7 +71,11 @@ class classyColor {
   }
   opposite (){
     const { h, s, l } = this
-    return `hsl(${(h+180)%360},${s}%,${l}%)`
+    return `hsl(${(h+180)%360},${Math.abs(100-s)}%,${Math.abs(100-l)}%)`
+  }
+  fullSaturation(){
+    const { h, l } = this
+    return `hsl(${h},100%,${l}%)`
   }
   rgb () {
     return `rgb(${this.innerRgb()})`

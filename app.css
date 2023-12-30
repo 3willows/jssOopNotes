@@ -1,6 +1,5 @@
 .colorTitle {
   color: hsl(343, 36%, 49%);
-
 }
 
 ol ul {
@@ -17,4 +16,8 @@ ul {
 
 .oppositeColor {
    color: hsl(163, 36%, 49%);
+}
+
+.saturatedColor{
+  color: hsl(343, 100%, 49%);
 }
