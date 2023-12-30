@@ -24,15 +24,13 @@ form.addEventListener('change', function (e) {
 
   rgbValues.value = `${r}, ${g}, ${b}`
   hexValues.value = colorObject.hex()
-  console.log(colorObject.hsl())
+  // console.log(colorObject.hsl())
 
-  const oppositeObject = new classyColor(r, g, b)
   const oppositeColor = document.querySelector('.oppositeColor')
-  oppositeColor.style.color = oppositeObject.opposite()
-  console.log(oppositeObject.opposite())
+  oppositeColor.style.color = colorObject.opposite()
+  // console.log(colorObject.opposite())
 
-  const saturatedObject = new classyColor(r, g, b)
   const saturatedColor = document.querySelector('.saturatedColor')
-  saturatedColor.style.color = saturatedObject.fullSaturation()
-  console.log(saturatedObject.fullSaturation())
+  saturatedColor.style.color = colorObject.fullSaturation()
+  // console.log(colorObject.fullSaturation())
 })
