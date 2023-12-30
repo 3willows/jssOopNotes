@@ -24,7 +24,10 @@ form.addEventListener('change', function (e) {
   const hexValues = document.querySelector('#hexValues')
 
   rgbValues.value = `${r}, ${g}, ${b}`
-
   hexValues.value = colorObject.hex()
+
+  const oppositeColor = document.querySelector('.oppositeColor')
+
+  oppositeColor.style.color = colorObject.opposite()
 })
 

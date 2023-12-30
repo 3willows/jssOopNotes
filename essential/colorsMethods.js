@@ -5,3 +5,4 @@ const rgb = (r, g, b) => {
   return `rgb(${r}${g}${b})`
 }
 
+// missing the code for HSL

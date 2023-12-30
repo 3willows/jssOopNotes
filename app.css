@@ -1,5 +1,6 @@
 .colorTitle {
-  color: rgb(170, 50, 75);
+  color: hsl(343, 36%, 49%);
+
 }
 
 ol ul {
@@ -13,3 +14,7 @@ ul {
   margin: 0;
 }
  */
+
+.oppositeColor {
+   color: hsl(163, 36%, 49%);
+}
