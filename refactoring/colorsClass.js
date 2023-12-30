@@ -1,11 +1,3 @@
-const hex = (r, g, b) =>
-  `#` + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
-
-const rgb = (r, g, b) => {
-  return `rgb(${r}${g}${b})`
-}
-
-// console.log(hex(0, 51, 255))
 // OLDEST WAY: This is the "factory" pattern (???)
 
 function makeColor (r, g, b) {
@@ -85,37 +77,3 @@ class classyColor {
 }
 
 const c1 = new classyColor(170, 80, 105, 'classy purple')
-
-// DOM
-
-const colorTitles = document.querySelectorAll('.colorTitle')
-const form = document.querySelector('form')
-
-form.addEventListener('change', function (e) {
-  const formData = new FormData(this) // Gets the form data
-
-  const r = formData.get('r') // Retrieves the 'r' value from form data
-  const g = formData.get('g') // Retrieves the 'g' value from form data
-  const b = formData.get('b') // Retrieves the 'b' value from form data
-
-  console.log(`Red: ${r}, Green: ${g}, Blue: ${b}`)
-  const rgbColor = `rgb(${r}, ${g}, ${b})`;
-
-  // Iterate through each .colorTitle element and apply the style
-  colorTitles.forEach(colorTitle => {
-    colorTitle.style.color = rgbColor
-  })
-
-  // const k = makeColor(r, g, b)
-  // const colorObject = new Color(r, g, b)
-  const colorObject = new classyColor(r, g, b)
-
-  const rgbValues = document.querySelector('#rgbValues')
-  const hexValues = document.querySelector('#hexValues')
-
-  rgbValues.value = `${r}, ${g}, ${b}`
-
-  hexValues.value = colorObject.hex()
-})
-
-const color1 = new Color(98, 164, 75)
