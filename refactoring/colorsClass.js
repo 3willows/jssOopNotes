@@ -69,6 +69,10 @@ class classyColor {
     const { h, s, l } = this
     return `hsl(${h},${s}%,${l}%)`
   }
+  displayHsl () {
+    const { h, s, l } = this
+    return `${h}, ${s}%, ${l}%`
+  }
   opposite (){
     const { h, s, l } = this
     return `hsl(${(h+180)%360},${Math.abs(100-s)}%,${Math.abs(100-l)}%)`

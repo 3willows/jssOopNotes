@@ -6,18 +6,23 @@
   <meta name="viewliort" content="width=device-width, initial-scale=1.0">
   <title>Javascript OOP Notes</title>
   <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  </script>
+
 </head>
 
-<body>
-
-  <h1 class="colorTitle">Javascript OOP Notes</h1>
+<body class="font-sans text-xl">
+ 
+  <h1 class="bg-white h-11 font-serif text-2xl text-center py-2 colorTitle">Javascript OOP Notes</h1>
   <ol>
     <li>
       In proto_underHood.js
       <ul>
         <li><span class="colorTitle">Open Developer Tools => Console</span></li>
         <li>Type a string followed by ".yell()" </li>
-        <li><span class="colorTitle">Because of a custom definition, the string will be printed on the console in upper case </span></li>
+        <li><span class="colorTitle">Because of a custom definition, the string will be printed on the console in upper
+            case </span></li>
         <li>Example:">hello".yell() ↵ => HELLO</li>
       </ul>
     <li>
@@ -26,13 +31,14 @@
     <li>
       In the "essential" and "refactoring" directories
       <p class="colorTitle"> (Currently wired to "colorsClass.js" in the "refactoring" direcotry)</p>
-      <ul>
+      <ul class="text-center">
         <form action="">
           <li> r <input type="range" name="r" min="0" max="255" value="170"></li>
           <li> g <input type="range" name="g" min="0" max="255" value="50"></li>
           <li> b <input type="range" name="b" min="0" max="255" value="75"></li>
-          <li>RGB value<input type="text" id="rgbValues" placeholder="move the dials!"></li>
-          <li>HEX value<input type="text" id="hexValues" placeholder="move the dials!">
+          <li>RGB value<input type="text" id="rgbValues" placeholder="move the dials!" class="bg-gray-200 text-center"></li>
+          <li>HEX value<input type="text" id="hexValues" placeholder="move the dials!" class="bg-gray-200 text-center">
+          <li>HSL value<input type="text" id="hslValues" placeholder="move the dials!" class="bg-gray-200 text-center">
           </li>
         </form>
       </ul>
@@ -58,7 +64,6 @@
 
   <script src="essential/colorsDom.js"></script>
 
-  <script> </script>
 </body>
 
 </html>
